@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.blog{
+
+    &__card{
+        border-bottom: .1rem solid v.$colorGris;
+    }
+
+    &__card{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5rem;
+        padding: 3rem 0;
+        align-items: center;
+    }
+    &__contenido{
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+    &__imagen{
+        width: 30%;
+        object-fit: cover;
+    }
+
+    &__title{
+        color: v.$colorGris;
+    }
+
+    &__heading{
+        max-width:80%;
+
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 2rem 0;
+        @include m.tablet {
+            max-width: unset;
+            font-size: 3rem; 
+            
+         }
+    }
+}

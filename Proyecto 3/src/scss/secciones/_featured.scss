@@ -1,0 +1,55 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.featured{
+    background-color: v.$colorRosa;
+    border-radius: 2%;
+
+
+    &__grid{
+        padding:2rem;
+        @include m.tablet {
+            padding: 10rem;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem; 
+            align-items: center;
+            
+         }
+    }
+
+    &__title{
+        color: v.$colorGris;
+    }
+    &__heading{
+        margin: 3rem 0;
+        font-size: 2rem;
+        font-weight: 700;
+        @include m.tablet{
+            font-size: 3rem; 
+            
+         }
+    }
+
+    &__txt{
+        margin-bottom: 3rem;
+    }
+    &__boton{
+        color: v.$colorRojo;
+        font-size: 1.6rem;
+        font-weight: 700;
+        transition-property: color;
+        transition-duration: .8s;
+        &:hover{
+            cursor: pointer;
+            color: v.$colorMorado;
+        }
+    }
+    &__imagen{
+        margin-top: 5rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+}

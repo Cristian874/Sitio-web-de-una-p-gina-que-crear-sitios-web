@@ -1,0 +1,48 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: v.$fuentePrincipal;
+    
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1,h2{
+    font-family: v.$fuenteHeading;
+    font-weight: 400;
+}
+
+p{
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: v.$colorGris;
+    line-height: 2;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+

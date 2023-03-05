@@ -1,0 +1,24 @@
+{
+  "name": "proyecto-3",
+  "version": "1.0.0",
+  "description": "Proyecto 3 desarrollado usando html, css, sass, gulp, JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Omar Guzman Vargas",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.1"
+  },
+  "browserslist": [
+    "IE 10",
+    "last 1 version",
+    "> 1%"
+  ]
+}

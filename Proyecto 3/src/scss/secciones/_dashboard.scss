@@ -1,0 +1,20 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.dashboard{
+
+    &__heading{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        @include m.tablet {
+            font-size: 5rem; 
+            
+         }
+    }
+
+    &__img{
+        margin-top: 5rem;
+        box-shadow: 0 1px 20px 20px rgb(0 0 0  /.1);
+    }
+}

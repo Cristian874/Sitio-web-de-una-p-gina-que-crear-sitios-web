@@ -1,0 +1,160 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.final{
+    background-position: center;
+
+  background-image: url(../img/pattern.webp);
+  background-size: cover;
+  background-color: v.$colorFinal;
+  
+  padding:20rem 0;
+  
+
+  &__title{
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+  &__heading{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 3rem 0;
+    @include m.tablet {
+        font-size: 5rem; 
+        
+     }
+  }
+
+  &__formulario{
+    @include m.tablet {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        max-width: 70%;
+        margin: 0 auto;
+        align-items: center;
+        
+     }
+  }
+  &__input{
+    width: 90%;
+    padding:1rem;
+    height: 3rem;
+    border: none;
+    font-size: 1.7rem;
+     margin-bottom: 2rem;
+     outline: none;
+     @include m.tablet {
+        margin-bottom: 0; 
+        
+      }
+  }
+
+  &__boton{
+    background-color: v.$colorRojo; 
+    border: none;
+    color: v.$colorBlanco;
+    padding: 1.5rem 3rem;
+    @include m.tablet {
+       
+        margin-top: 0;
+     }
+  }
+
+  &__figura{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    animation: pelotas 5s  ease-in-out infinite;
+
+    &:nth-child(1){
+        margin-top: -40rem;
+        margin-left: 80%;
+        
+    }
+    &:nth-child(2){
+
+        margin-left: 40%;
+        
+    }
+
+    &:nth-child(3){
+
+        margin-left: 10%;
+        
+    }
+
+    &:nth-child(4){
+        
+        margin-left: 80%;
+        
+    }
+    &:nth-child(5){
+
+        margin-left: 40%;
+        
+    }
+
+    &:nth-child(6){
+
+        margin-left: 10%;
+        
+    }
+  }
+
+  &__figura--roja{
+    background-color: v.$colorRojo;
+   
+   
+   
+  }
+  &__figura--morada{
+    background-color: v.$colorMorado;
+
+  }
+
+  &__figura--gris{
+    background-color: v.$colorGris;
+  }
+}
+
+@keyframes pelotas{
+  
+    0%{
+        transform: scale(1.1);
+        opacity: 1;
+
+
+    }
+    25%{
+        transform: scale(1.2);
+        opacity: .8;
+
+    }
+
+    50%{
+        transform: scale(1.3);
+        opacity: .6;
+
+
+    }
+
+    75%{
+        transform: scale(1.4);
+        opacity: .4;
+
+
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: .2;
+
+
+    }
+
+
+
+}

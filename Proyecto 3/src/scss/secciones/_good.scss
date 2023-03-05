@@ -1,0 +1,107 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.good{
+
+
+
+    &__title{
+        color: v.$colorMorado;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.8rem;
+        margin: 3rem 0;
+    
+    }
+
+    &__heading{
+        font-size: 2rem;
+        @include m.tablet {
+            font-size: 4rem; 
+            width: 30%;
+            
+         }
+    }
+
+    &__imagenes{
+        margin-top: 10rem;
+
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem; 
+            
+         }
+    }
+
+    &__secundarias{
+        margin-top: 5rem;
+       
+
+        
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem; 
+            @include m.tablet {
+                display:unset 
+                
+             };
+            
+         
+    }
+
+    &__mascara{
+        overflow: hidden;
+
+    }
+   &__imagen{
+
+    @include m.tablet { 
+        width: 70%;
+        margin: 0 auto;
+        
+     }
+ 
+   }
+
+   &__img{
+     transition-property: transform,;
+     transition-duration: .7s;
+    &:hover{
+        
+        transform: scale(1.1);
+    }
+   }
+ 
+
+    &__imagen--uno{
+        height: 20rem;
+        @include m.tablet { 
+            margin-top: -20rem;
+            
+         }
+
+    }
+    
+    &__imagen--dos{
+        
+        @include m.tablet { 
+            margin-top: 20rem;
+            
+         }
+         @include m.desktop { 
+            margin-top: 30rem;
+          }
+        
+    }
+   
+
+    &__txt{
+        margin: 1rem 0;
+        padding: 0 2rem;
+        color: v.$colorGris;
+    }
+    &__titular{
+        font-size: 2rem;
+        padding: 0 2rem;
+    }
+}

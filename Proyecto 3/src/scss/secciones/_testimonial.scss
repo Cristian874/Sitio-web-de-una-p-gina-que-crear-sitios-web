@@ -1,0 +1,135 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.testimonial{
+    margin-top: 15rem;
+    background-image: url(../img/final.webp);
+    background-size: cover;
+    background-position: center;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__clientes{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+        @include m.tablet { 
+            gap: 3rem;
+            grid-template-columns: repeat(6,1fr);
+       
+            
+         }
+    }
+
+    &__img{
+        width: 50%;
+        margin: 0 auto;
+        animation: border 3s  ease-in-out infinite;
+        
+    }
+
+    &__img--uno{
+        margin-top: -5rem;
+       
+    }
+
+    &__img--dos{
+        margin-top: 5rem;
+        @include m.tablet { 
+            margin-top: 10rem;
+            
+        }
+    }
+
+
+    &__img--tres{
+        margin-top: -5rem;
+        @include m.tablet { 
+           
+            
+        }
+    }
+
+    &__img--cuatro{
+        margin-top: 5rem;
+        @include m.tablet { 
+            margin-top: 10rem;
+            
+        }
+    }
+    &__img--cinco{
+     
+        @include m.tablet { 
+            margin-top: -5rem;
+           
+            
+        }
+    }
+    &__img--seis{
+        margin-top: 5rem;
+        @include m.tablet { 
+            margin-top: 10rem;
+            
+        }
+    }
+
+    &__carrusel{
+        margin-top: 10rem;
+    }
+    &__title{
+        color: v.$colorMorado;
+        margin: 3rem 0;
+        text-transform: uppercase;
+    }
+
+    &__heading{
+        @include m.tablet { 
+            font-size: 4rem;
+            width: 50%;
+            margin: 0 auto;
+            
+         }
+      
+    }
+}
+
+@keyframes border{
+   
+    0%{
+
+        border: .5rem solid v.$colorRojo;
+        border-radius: 50%;
+        transition-duration: .4s;
+    }
+    25%{
+
+        border: .4rem solid v.$colorRojo;
+        border-radius: 50%;
+        transition-duration: .4s;
+    }
+    50%{
+
+        border: .3rem solid v.$colorRojo;
+        border-radius: 50%;
+        transition-duration: .4s;
+    }
+    75%{
+
+        border: .2rem solid v.$colorRojo;
+        border-radius: 50%;
+        transition-duration: .4s;
+    }
+
+
+    100%{
+
+        border: .1rem solid v.$colorRojo;
+        border-radius: 50%;
+        transition-duration: .4s;
+    }
+
+
+
+}
